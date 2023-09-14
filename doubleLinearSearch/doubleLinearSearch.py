@@ -4,7 +4,7 @@ import numpy as np  # pip install numpy
 def convertToVector(data) -> np.array:
     '''
      So with python there is no specific "vector" variable and I researched and found out that most of the internet
-     considers numpy as the vector variable.
+     considers numpy as the vector variable because they are similar and are directly implemented in C .
 
      This function:
 
