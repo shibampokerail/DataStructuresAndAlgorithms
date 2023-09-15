@@ -29,7 +29,7 @@ def convertToVector(data) -> np.array:
     return vector
 
 
-def linearSearch(array, searchValue: int) -> set:
+def linearSearch(array, searchValue: int) -> np.array:
     '''
      This function:
 
@@ -38,19 +38,19 @@ def linearSearch(array, searchValue: int) -> set:
             ->array : the array variable that is to be searched
             ->searchValue : the integer value that is to be searched in the array variable
        ->searches for two instances of the searchValue in the array
-       ->returns a set variable ("{2,3}") with the indexes of the two instances
+       ->returns a numpy array variable (example "2,3") with the indexes of the two instances
 
     '''
     array = convertToVector(array)
     count = 0
     found_indexes = []
     for i in range(len(array)):
-        if array[i] == searchValue:
+        if array[i] == searchValue: #compare with individual
             found_indexes.append(count)
-            if len(found_indexes) == 2:
-                return set(found_indexes)
+            if len(found_indexes) == 2: # when two instances are found
+                return np.array([found_indexes])
         count += 1
 
-    return {-1}
+    return np.array([-1])
 
 #print(linearSearch([1,3,2,4,5,16,16], 16))
