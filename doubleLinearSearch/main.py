@@ -1,3 +1,6 @@
 from doubleLinearSearch import linearSearch
-
-print(linearSearch([1,3,2,4,5,16,16], 16)) # output should be {5,6}
+import numpy as np
+array = np.array([10, 50, 16, 1, 9, 15, 16, 20, 16, 2, 5])
+searchValue = 16
+searchResult = linearSearch(array, searchValue)
+print(searchResult) # output should be {5,6}
