@@ -6,12 +6,10 @@ def convertToVector(data) -> np.array:
      So with python there is no specific "vector" variable and I researched and found out that most of the internet
      considers numpy as the vector variable because they are similar and are directly implemented in C .
 
-     This function:
-
-       ->converts any list,set or map variable into a numpy array i.e vector in python.
+    This function converts any list,set or map variable into a numpy array i.e vector in python.
        ->Handles the data type mismatch error
-       ->takes the "data" variable in as a parameter
-       ->returns a numpy array variable
+       ->param: "data" variable in as a parameter
+       ->returns:  a numpy array variable
 
     '''
 
@@ -31,19 +29,18 @@ def convertToVector(data) -> np.array:
 
 def linearSearch(array, searchValue: int) -> np.array:
     '''
-     This function:
-
-       ->converts any list,set or map variable into a numpy array i.e vector using convertToVector method.
-       ->takes in two parameters
+        Converts any list,set or map variable into a numpy array i.e vector using convertToVector method.
+       ->takes in two params:
             ->array : the array variable that is to be searched
             ->searchValue : the integer value that is to be searched in the array variable
        ->searches for two instances of the searchValue in the array
-       ->returns a numpy array variable (example "2,3") with the indexes of the two instances
+       ->returns: a numpy array variable (example "2,3") with the indexes of the two instances
 
     '''
-    array = convertToVector(array)
-    count = 0
-    found_indexes = []
+    array = convertToVector(array) #c1
+    count = 0 #c2
+    found_indexes = [] #c3
+
     for i in range(len(array)):
         if array[i] == searchValue: #compare with individual
             found_indexes.append(count)
